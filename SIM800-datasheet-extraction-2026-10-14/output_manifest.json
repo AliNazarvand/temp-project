@@ -1,0 +1,95 @@
+{
+  "extraction_date": "2026-10-14",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 2501,
+      "sha256": "3c45654c1710e28b042d1f2acb5d257d74524778daeec549399b2a07fb86c5ac"
+    },
+    {
+      "path": "at_commands.csv",
+      "bytes": 4219001,
+      "sha256": "897c8aa9c5406c3a485e04042656036ecf961f6351ba7925764cc4a227fef490"
+    },
+    {
+      "path": "modules/SIM800.json",
+      "bytes": 62969,
+      "sha256": "376e6d1859707d75b362ed8a5f7c4f5a5c9a6adcb302979654af322c7c52a046"
+    },
+    {
+      "path": "modules/SIM800A.json",
+      "bytes": 61470,
+      "sha256": "1b30c635866fb0ff21b0771a0153caf6a74a5c14fd6d68334e285ac3f5906287"
+    },
+    {
+      "path": "modules/SIM800C-DS.json",
+      "bytes": 69147,
+      "sha256": "b2b560e243f1bee03d860b8b3af8d06827b2a29f3d8beb675aa96aadfff20341"
+    },
+    {
+      "path": "modules/SIM800C.json",
+      "bytes": 52154,
+      "sha256": "79d3a6b06f24f1b1d3112f0cd4dbee15b79f3907f11295af8685a534be894fba"
+    },
+    {
+      "path": "modules/SIM800F.json",
+      "bytes": 67487,
+      "sha256": "22e306c782f74a94cf32aea076697ea538bae6b15be8f6fadaa6be4db70d4a9a"
+    },
+    {
+      "path": "modules/SIM800H.json",
+      "bytes": 67427,
+      "sha256": "5275d55acb43293f7aaea90d0186bd9b738f1d3e82a32aca491921bc77e1d99c"
+    },
+    {
+      "path": "modules/SIM800L.json",
+      "bytes": 74079,
+      "sha256": "770d8d634840bee3771143bba9a0aab82e6f47049ef8031fc4181371294fbd90"
+    },
+    {
+      "path": "modules/SIM808.json",
+      "bytes": 70056,
+      "sha256": "d2027173951b30491791b3d0cc9738db71047c16279f6fda9fbe52703437d282"
+    },
+    {
+      "path": "modules/SIM868.json",
+      "bytes": 63727,
+      "sha256": "ce132a3e896c0f38d9f4c987785ac8c0f3d6ec9651747642d3200e40f08e86bf"
+    },
+    {
+      "path": "shared_at_command_catalog.json",
+      "bytes": 5643279,
+      "sha256": "83143fb45b532b48f429746aedd225d25815e98e018c9acdfef5113a1e34623c"
+    },
+    {
+      "path": "sim800_datasheets.json",
+      "bytes": 6501955,
+      "sha256": "c7913a838128be72961fa9e6c5765cc3d88e09d0f2cf15dc46ea17c87a375e69"
+    },
+    {
+      "path": "source_manifest.json",
+      "bytes": 5127,
+      "sha256": "e62646102600b7f8adc4eb73a926d22165f3d29cca5b3e000672b81a82754d62"
+    },
+    {
+      "path": "specs.csv",
+      "bytes": 51448,
+      "sha256": "f613a727abf59e912fb721d4bb0adb775cf488252c475fb8d2fef576da116d98"
+    },
+    {
+      "path": "summary.md",
+      "bytes": 11547,
+      "sha256": "1d1ffeb5b07c12a15d5c89b56e020276816022fa2518ecb4bd435b54ae3be621"
+    },
+    {
+      "path": "tests.csv",
+      "bytes": 21227,
+      "sha256": "3c0f97b7722f0cd7b68c7fca09fa0b73f355e911f84bdc9f64a6c4962b43196d"
+    },
+    {
+      "path": "validation_report.md",
+      "bytes": 190119,
+      "sha256": "d980af09fcc750d67ae7b745d9868488e7e5e23e13cf8a8a7d360bf428ed6ece"
+    }
+  ]
+}

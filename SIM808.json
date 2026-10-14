@@ -1,0 +1,2494 @@
+{
+  "schema_version": "1.0",
+  "module": "SIM808",
+  "source_documents": [
+    {
+      "filename": "SIM808_Hardware Design_V1.03.txt",
+      "document_title": "SIM808_Hardware_Design_V1.03",
+      "version": "1.03",
+      "date": "2016-06-30",
+      "status": "Release",
+      "source": {
+        "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+        "pages": [
+          2
+        ]
+      }
+    }
+  ],
+  "technical_specs": {
+    "operating_voltage": [
+      {
+        "value": "3.4–4.4",
+        "unit": "V",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            21
+          ]
+        }
+      },
+      {
+        "value": "3.4 min; 4.0 typ; 4.4 max (VBAT power supply voltage)",
+        "unit": "V",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            58
+          ]
+        }
+      }
+    ],
+    "current_consumption": [
+      {
+        "mode": "Power saving, typical sleep mode (BS-PA-MFRMS=9)",
+        "measurement": {
+          "value": "1.07",
+          "unit": "mA",
+          "source": {
+            "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+            "pages": [
+              10
+            ]
+          }
+        }
+      },
+      {
+        "mode": "Sleep mode, as-low-as statement with GNSS engine powered down",
+        "measurement": {
+          "value": "1.2",
+          "unit": "mA",
+          "source": {
+            "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+            "pages": [
+              10
+            ]
+          }
+        }
+      },
+      {
+        "mode": "GNSS acquisition; single power supply 3.8V @ -130dBm, GSM IDLE",
+        "measurement": {
+          "value": "42",
+          "unit": "mA",
+          "source": {
+            "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+            "pages": [
+              12
+            ]
+          }
+        }
+      },
+      {
+        "mode": "GNSS continuous tracking; single power supply 3.8V @ -130dBm, GSM IDLE",
+        "measurement": {
+          "value": "24",
+          "unit": "mA",
+          "source": {
+            "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+            "pages": [
+              12
+            ]
+          }
+        }
+      },
+      {
+        "mode": "Functionality mode <fun>=0 (AT+CSCLK=1)",
+        "measurement": {
+          "value": "0.801",
+          "unit": "mA",
+          "source": {
+            "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+            "pages": [
+              28
+            ]
+          }
+        }
+      },
+      {
+        "mode": "Functionality mode <fun>=1 (AT+CSCLK=1; BS-PA-MFRMS=5)",
+        "measurement": {
+          "value": "1.176",
+          "unit": "mA",
+          "source": {
+            "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+            "pages": [
+              28
+            ]
+          }
+        }
+      },
+      {
+        "mode": "Functionality mode <fun>=4 (AT+CSCLK=1)",
+        "measurement": {
+          "value": "0.925",
+          "unit": "mA",
+          "source": {
+            "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+            "pages": [
+              28
+            ]
+          }
+        }
+      },
+      {
+        "mode": "Power off mode; VBAT=4V and GNSS engine powered down",
+        "measurement": {
+          "value": "134 typ; 150 max",
+          "unit": "uA",
+          "source": {
+            "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+            "pages": [
+              60
+            ]
+          }
+        }
+      },
+      {
+        "mode": "Sleep mode (AT+CFUN=1), BS-PA-MFRMS=9; VBAT=4V and GNSS engine powered down",
+        "measurement": {
+          "value": "1.073 typ",
+          "unit": "mA",
+          "source": {
+            "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+            "pages": [
+              60
+            ]
+          }
+        }
+      },
+      {
+        "mode": "Sleep mode (AT+CFUN=1), BS-PA-MFRMS=5; VBAT=4V and GNSS engine powered down",
+        "measurement": {
+          "value": "1.167 typ",
+          "unit": "mA",
+          "source": {
+            "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+            "pages": [
+              60
+            ]
+          }
+        }
+      },
+      {
+        "mode": "Sleep mode (AT+CFUN=1), BS-PA-MFRMS=2; VBAT=4V and GNSS engine powered down",
+        "measurement": {
+          "value": "1.627 typ",
+          "unit": "mA",
+          "source": {
+            "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+            "pages": [
+              60
+            ]
+          }
+        }
+      },
+      {
+        "mode": "Idle mode (AT+CFUN=1), EGSM900; VBAT=4V and GNSS engine powered down",
+        "measurement": {
+          "value": "16.80 typ",
+          "unit": "mA",
+          "source": {
+            "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+            "pages": [
+              60
+            ]
+          }
+        }
+      },
+      {
+        "mode": "Voice call (PCL=5), GSM850; VBAT=4V and GNSS engine powered down",
+        "measurement": {
+          "value": "216.6 typ",
+          "unit": "mA",
+          "source": {
+            "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+            "pages": [
+              60
+            ]
+          }
+        }
+      },
+      {
+        "mode": "Voice call (PCL=5), EGSM900; VBAT=4V and GNSS engine powered down",
+        "measurement": {
+          "value": "221.7 typ",
+          "unit": "mA",
+          "source": {
+            "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+            "pages": [
+              60
+            ]
+          }
+        }
+      },
+      {
+        "mode": "Voice call (PCL=0), DCS1800; VBAT=4V and GNSS engine powered down",
+        "measurement": {
+          "value": "140.3 typ",
+          "unit": "mA",
+          "source": {
+            "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+            "pages": [
+              60
+            ]
+          }
+        }
+      },
+      {
+        "mode": "Voice call (PCL=0), PCS1900; VBAT=4V and GNSS engine powered down",
+        "measurement": {
+          "value": "155.0 typ",
+          "unit": "mA",
+          "source": {
+            "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+            "pages": [
+              60
+            ]
+          }
+        }
+      },
+      {
+        "mode": "GPRS data (1Rx,4Tx), GSM850 / EGSM900 / DCS1800 / PCS1900; VBAT=4V and GNSS engine powered down",
+        "measurement": {
+          "value": "445.5 / 433.7 / 287.1 / 296.5 typ",
+          "unit": "mA",
+          "source": {
+            "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+            "pages": [
+              60
+            ]
+          }
+        }
+      },
+      {
+        "mode": "GPRS data (3Rx,2Tx), GSM850 / EGSM900 / DCS1800 / PCS1900; VBAT=4V and GNSS engine powered down",
+        "measurement": {
+          "value": "332.9 / 333.5 / 222.0 / 229.8 typ",
+          "unit": "mA",
+          "source": {
+            "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+            "pages": [
+              60
+            ]
+          }
+        }
+      },
+      {
+        "mode": "GPRS data (4Rx,1Tx), GSM850 / EGSM900 / DCS1800 / PCS1900; VBAT=4V and GNSS engine powered down",
+        "measurement": {
+          "value": "222.6 / 224.7 / 158.4 / 165.2 typ",
+          "unit": "mA",
+          "source": {
+            "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+            "pages": [
+              60
+            ]
+          }
+        }
+      },
+      {
+        "mode": "Peak current during TX burst; VBAT=4V and GNSS engine powered down",
+        "measurement": {
+          "value": "2.0 max",
+          "unit": "A",
+          "source": {
+            "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+            "pages": [
+              60
+            ]
+          }
+        }
+      }
+    ],
+    "frequency_bands": [
+      {
+        "value": "GSM850: receive 869–894; transmit 824–849",
+        "unit": "MHz",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            63
+          ]
+        }
+      },
+      {
+        "value": "EGSM900: receive 925–960; transmit 880–915",
+        "unit": "MHz",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            63
+          ]
+        }
+      },
+      {
+        "value": "DCS1800: receive 1805–1880; transmit 1710–1785",
+        "unit": "MHz",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            63
+          ]
+        }
+      },
+      {
+        "value": "PCS1900: receive 1930–1990; transmit 1850–1910",
+        "unit": "MHz",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            63
+          ]
+        }
+      }
+    ],
+    "dimensions": {
+      "value": "24*24*2.6",
+      "unit": "mm",
+      "source": {
+        "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+        "pages": [
+          11
+        ]
+      }
+    },
+    "weight": {
+      "value": "3.3",
+      "unit": "g",
+      "source": {
+        "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+        "pages": [
+          11
+        ]
+      }
+    },
+    "operating_temperature": {
+      "value": "-40 min; +25 typ; +85 max",
+      "unit": "℃",
+      "source": {
+        "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+        "pages": [
+          58
+        ]
+      }
+    },
+    "package_type": null,
+    "sim_card_type": [
+      {
+        "value": "1.8V SIM card supported",
+        "unit": "V",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            41
+          ]
+        }
+      },
+      {
+        "value": "3.0V SIM card supported",
+        "unit": "V",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            41
+          ]
+        }
+      }
+    ],
+    "gnss_gps_support": [
+      {
+        "value": "High-performance L1 GNSS solution",
+        "unit": null,
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            51
+          ]
+        }
+      },
+      {
+        "value": "GPS, QZSS, SBAS ranging (WAAS, EGNOS, GAGAN, MSAS)",
+        "unit": null,
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            51
+          ]
+        }
+      }
+    ],
+    "bluetooth": [
+      {
+        "value": "Bluetooth specification 3.0/2.1 + EDR compliant",
+        "unit": null,
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            51
+          ]
+        }
+      },
+      {
+        "value": "Class 1 output power",
+        "unit": null,
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            51
+          ]
+        }
+      },
+      {
+        "value": "Up to 4 simultaneous active ACL links",
+        "unit": null,
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            51
+          ]
+        }
+      },
+      {
+        "value": "Frequency range 2402–2480",
+        "unit": "MHz",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            12
+          ]
+        }
+      },
+      {
+        "value": "Maximum transmit power 7",
+        "unit": "dBm",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            12
+          ]
+        }
+      }
+    ],
+    "gprs_class": [
+      {
+        "value": "GPRS multi-slot class 12 (default)",
+        "unit": null,
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            11
+          ]
+        }
+      },
+      {
+        "value": "GPRS multi-slot class 1–12 (optional)",
+        "unit": null,
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            11
+          ]
+        }
+      },
+      {
+        "value": "GPRS coding schemes CS-1, CS-2, CS-3 and CS-4",
+        "unit": null,
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            11
+          ]
+        }
+      }
+    ],
+    "data_rate": [
+      {
+        "value": "GPRS data downlink transfer: max. 85.6",
+        "unit": "kbps",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            11
+          ]
+        }
+      },
+      {
+        "value": "GPRS data uplink transfer: max. 85.6",
+        "unit": "kbps",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            11
+          ]
+        }
+      },
+      {
+        "value": "CS-1: 9.05 / 18.1 / 36.2 for 1 / 2 / 4 timeslot",
+        "unit": "kbps",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            13
+          ]
+        }
+      },
+      {
+        "value": "CS-2: 13.4 / 26.8 / 53.6 for 1 / 2 / 4 timeslot",
+        "unit": "kbps",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            13
+          ]
+        }
+      },
+      {
+        "value": "CS-3: 15.6 / 31.2 / 62.4 for 1 / 2 / 4 timeslot",
+        "unit": "kbps",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            13
+          ]
+        }
+      },
+      {
+        "value": "CS-4: 21.4 / 42.8 / 85.6 for 1 / 2 / 4 timeslot",
+        "unit": "kbps",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            13
+          ]
+        }
+      }
+    ]
+  },
+  "at_commands": {
+    "catalog_ref": "../shared_at_command_catalog.json",
+    "source_scope_note": "The supplied module hardware-design document names the separate “SIM808 Series AT Command Manual” as related document [1] (physical page 66), but that manual is not supplied here. A family-level command catalog/manual is therefore not proof that any particular command is supported by this model or revision; only the module-document statements below are model-specific evidence.",
+    "module_specific_features": [
+      {
+        "feature": "AT+CBAND can set the four GSM/GPRS frequency bands.",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            11
+          ]
+        }
+      },
+      {
+        "feature": "AT+CPOWD=1 is identified as a normal power-off method.",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            14,
+            25,
+            26
+          ]
+        }
+      },
+      {
+        "feature": "AT+CBC can monitor VBAT voltage.",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            23
+          ]
+        }
+      },
+      {
+        "feature": "AT+IPR=x can set and save a fixed baud rate.",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            24,
+            34
+          ]
+        }
+      },
+      {
+        "feature": "AT+CFUN=<fun> controls functionality modes; the documented values are 0 minimum functionality, 1 full functionality (default), and 4 flight mode.",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            27,
+            28
+          ]
+        }
+      },
+      {
+        "feature": "AT+CSCLK=1 can set sleep mode.",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            27,
+            28
+          ]
+        }
+      },
+      {
+        "feature": "AT+echarge=1 enables the charging function, which is not supported by default.",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            30
+          ]
+        }
+      },
+      {
+        "feature": "AT+IFC=2,2 enables and AT+IFC=0,0 disables hardware flow control.",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            33
+          ]
+        }
+      },
+      {
+        "feature": "AT+CMIC adjusts microphone input gain; AT+SIDET sets side-tone level; AT+CLVL adjusts output gain.",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            39
+          ]
+        }
+      },
+      {
+        "feature": "AT+CSDT enables or disables SIM-card detection.",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            42
+          ]
+        }
+      },
+      {
+        "feature": "AT+SGPIO sets GPIO output voltage and reads GPIO input voltage.",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            47
+          ]
+        }
+      },
+      {
+        "feature": "AT+CADC reads auxiliary-ADC voltage.",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            48
+          ]
+        }
+      },
+      {
+        "feature": "AT + SPWM sets PWM output period and duty cycle; spacing is preserved from the extracted text.",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            49
+          ]
+        }
+      },
+      {
+        "feature": "Table 34 lists AT+CGNSPWR, AT+CGNSSEQ, AT+CGNSINF, AT+CGNSURC, AT+CGNSCMD and AT+CGNSTST for GNSS functions.",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            52
+          ]
+        }
+      },
+      {
+        "feature": "The GNSS prose states AT+CGNSSPWR=1 powers on and AT+CGNSSPWR=0 powers down GNSS; this spelling differs from Table 34 and is retained verbatim.",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            52
+          ]
+        }
+      },
+      {
+        "feature": "Bluetooth is described as having AT interfaces for pairing, bonding, pushing/receiving files, SPP service, and Bluetooth-headset-role remote-phone control; individual Bluetooth command names are not given in this document.",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            51
+          ]
+        }
+      }
+    ],
+    "missing_data": [
+      {
+        "field": "complete command definitions, parameters, responses, and revision-specific support matrix",
+        "reason": "The supplied hardware-design document refers to, but does not include, the SIM808 Series AT Command Manual and other application notes.",
+        "attempted_sources": [
+          {
+            "source_pdf": "SIM808_Hardware Design_V1.03.txt",
+            "pages": [
+              11,
+              23,
+              28,
+              39,
+              42,
+              47,
+              48,
+              49,
+              52,
+              66
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "hardware_design": {
+    "pinout": [
+      {
+        "pin_number": 1,
+        "pin_name": "GND",
+        "direction": null,
+        "type": "GND",
+        "function": "Ground",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            17
+          ]
+        }
+      },
+      {
+        "pin_number": 2,
+        "pin_name": "GND",
+        "direction": null,
+        "type": "GND",
+        "function": "Ground",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            17
+          ]
+        }
+      },
+      {
+        "pin_number": 3,
+        "pin_name": "GND",
+        "direction": null,
+        "type": "GND",
+        "function": "Ground",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            17
+          ]
+        }
+      },
+      {
+        "pin_number": 4,
+        "pin_name": "VBAT",
+        "direction": "I",
+        "type": null,
+        "function": "Power input; table states the power range is 3.4V to 4.4V and peak current is nearly 2A.",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            17
+          ]
+        }
+      },
+      {
+        "pin_number": 5,
+        "pin_name": "VBAT",
+        "direction": "I",
+        "type": null,
+        "function": "Power input; table states the power range is 3.4V to 4.4V and peak current is nearly 2A.",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            17
+          ]
+        }
+      },
+      {
+        "pin_number": 6,
+        "pin_name": "VBAT",
+        "direction": "I",
+        "type": null,
+        "function": "Power input; table states the power range is 3.4V to 4.4V and peak current is nearly 2A.",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            17
+          ]
+        }
+      },
+      {
+        "pin_number": 7,
+        "pin_name": "VDD_EXT",
+        "direction": "O",
+        "type": null,
+        "function": "2.8V power output",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            17
+          ]
+        }
+      },
+      {
+        "pin_number": 8,
+        "pin_name": "PWRKEY",
+        "direction": "I",
+        "type": null,
+        "function": "Pull low for at least 1 second and release to power on/off the module.",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            17
+          ]
+        }
+      },
+      {
+        "pin_number": 9,
+        "pin_name": "DTR",
+        "direction": "I",
+        "type": null,
+        "function": "Data terminal ready",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            18
+          ]
+        }
+      },
+      {
+        "pin_number": 10,
+        "pin_name": "RI",
+        "direction": "O",
+        "type": null,
+        "function": "Ring indicator",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            18
+          ]
+        }
+      },
+      {
+        "pin_number": 11,
+        "pin_name": "DCD",
+        "direction": "O",
+        "type": null,
+        "function": "Data carrier detect",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            18
+          ]
+        }
+      },
+      {
+        "pin_number": 12,
+        "pin_name": "CTS",
+        "direction": "O",
+        "type": null,
+        "function": "Clear to send",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            18
+          ]
+        }
+      },
+      {
+        "pin_number": 13,
+        "pin_name": "RTS",
+        "direction": "I",
+        "type": null,
+        "function": "Request to send",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            18
+          ]
+        }
+      },
+      {
+        "pin_number": 14,
+        "pin_name": "TXD",
+        "direction": "O",
+        "type": null,
+        "function": "Transmit data",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            18
+          ]
+        }
+      },
+      {
+        "pin_number": 15,
+        "pin_name": "RXD",
+        "direction": "I",
+        "type": null,
+        "function": "Receive data",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            18
+          ]
+        }
+      },
+      {
+        "pin_number": 16,
+        "pin_name": "RESET",
+        "direction": "I",
+        "type": null,
+        "function": "Reset input (Active low)",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            18
+          ]
+        }
+      },
+      {
+        "pin_number": 17,
+        "pin_name": "VRTC",
+        "direction": "I/O",
+        "type": null,
+        "function": "Power supply for RTC",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            17
+          ]
+        }
+      },
+      {
+        "pin_number": 18,
+        "pin_name": "GND",
+        "direction": null,
+        "type": "GND",
+        "function": "Ground",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            17
+          ]
+        }
+      },
+      {
+        "pin_number": 19,
+        "pin_name": "MIC1P",
+        "direction": "I",
+        "type": null,
+        "function": "Differential audio input",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            17
+          ]
+        }
+      },
+      {
+        "pin_number": 20,
+        "pin_name": "MIC1N",
+        "direction": "I",
+        "type": null,
+        "function": "Differential audio input",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            17
+          ]
+        }
+      },
+      {
+        "pin_number": 21,
+        "pin_name": "SPK1P",
+        "direction": "O",
+        "type": null,
+        "function": "Differential audio output",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            17
+          ]
+        }
+      },
+      {
+        "pin_number": 22,
+        "pin_name": "SPK1N",
+        "direction": "O",
+        "type": null,
+        "function": "Differential audio output",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            17
+          ]
+        }
+      },
+      {
+        "pin_number": 23,
+        "pin_name": "ADC0",
+        "direction": "I",
+        "type": null,
+        "function": "10 bit general analog to digital converter",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            18
+          ]
+        }
+      },
+      {
+        "pin_number": 24,
+        "pin_name": "ADC1",
+        "direction": "I",
+        "type": null,
+        "function": "10 bit general analog to digital converter",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            18
+          ]
+        }
+      },
+      {
+        "pin_number": 25,
+        "pin_name": "VCHG",
+        "direction": "I",
+        "type": null,
+        "function": "VCHG power supply",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            18,
+            33
+          ]
+        }
+      },
+      {
+        "pin_number": 26,
+        "pin_name": "USB_DP",
+        "direction": "I/O",
+        "type": null,
+        "function": "Debug and firmware upgrading",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            18
+          ]
+        }
+      },
+      {
+        "pin_number": 27,
+        "pin_name": "USB_DN",
+        "direction": "I/O",
+        "type": null,
+        "function": "Debug and firmware upgrading",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            18
+          ]
+        }
+      },
+      {
+        "pin_number": 28,
+        "pin_name": "GND",
+        "direction": null,
+        "type": "GND",
+        "function": "Ground",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            17
+          ]
+        }
+      },
+      {
+        "pin_number": 29,
+        "pin_name": "SIM_VDD",
+        "direction": "O",
+        "type": null,
+        "function": "Voltage supply for SIM card; supports 1.8V or 3V SIM card.",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            18
+          ]
+        }
+      },
+      {
+        "pin_number": 30,
+        "pin_name": "SIM_DATA",
+        "direction": "I/O",
+        "type": null,
+        "function": "SIM data input/output",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            18
+          ]
+        }
+      },
+      {
+        "pin_number": 31,
+        "pin_name": "SIM_CLK",
+        "direction": "O",
+        "type": null,
+        "function": "SIM clock",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            18
+          ]
+        }
+      },
+      {
+        "pin_number": 32,
+        "pin_name": "SIM_RST",
+        "direction": "O",
+        "type": null,
+        "function": "SIM reset",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            18
+          ]
+        }
+      },
+      {
+        "pin_number": 33,
+        "pin_name": "SIM_DET",
+        "direction": "I",
+        "type": null,
+        "function": "SIM card detection",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            18
+          ]
+        }
+      },
+      {
+        "pin_number": 34,
+        "pin_name": "GND",
+        "direction": null,
+        "type": "GND",
+        "function": "Ground",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            17
+          ]
+        }
+      },
+      {
+        "pin_number": 35,
+        "pin_name": "GPS_ANT",
+        "direction": "I",
+        "type": null,
+        "function": "Connect GPS antenna",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            18
+          ]
+        }
+      },
+      {
+        "pin_number": 36,
+        "pin_name": "GND",
+        "direction": null,
+        "type": "GND",
+        "function": "Ground",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            17
+          ]
+        }
+      },
+      {
+        "pin_number": 37,
+        "pin_name": "1PPS",
+        "direction": "O",
+        "type": null,
+        "function": "Time Mark outputs timing pulse related to receiver time",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            18
+          ]
+        }
+      },
+      {
+        "pin_number": 38,
+        "pin_name": "SDA",
+        "direction": "I/O",
+        "type": null,
+        "function": "I2C serial bus data",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            18
+          ]
+        }
+      },
+      {
+        "pin_number": 39,
+        "pin_name": "SCL",
+        "direction": "O",
+        "type": null,
+        "function": "I2C serial bus clock",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            18
+          ]
+        }
+      },
+      {
+        "pin_number": 40,
+        "pin_name": "GND",
+        "direction": null,
+        "type": "GND",
+        "function": "Ground",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            17
+          ]
+        }
+      },
+      {
+        "pin_number": 41,
+        "pin_name": "PWM2",
+        "direction": "O",
+        "type": null,
+        "function": "Pulse-width modulation",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            18
+          ]
+        }
+      },
+      {
+        "pin_number": 42,
+        "pin_name": "PWM1",
+        "direction": "O",
+        "type": null,
+        "function": "Pulse-width modulation",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            18
+          ]
+        }
+      },
+      {
+        "pin_number": 43,
+        "pin_name": "GPIO19",
+        "direction": "I/O",
+        "type": null,
+        "function": "Programmable general purpose input and output",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            18
+          ]
+        }
+      },
+      {
+        "pin_number": 44,
+        "pin_name": "GPIO17",
+        "direction": "I/O",
+        "type": null,
+        "function": "Programmable general purpose input and output",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            18
+          ]
+        }
+      },
+      {
+        "pin_number": 45,
+        "pin_name": "PCM_SYNC",
+        "direction": "O",
+        "type": null,
+        "function": "PCM interface for audio",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            17
+          ]
+        }
+      },
+      {
+        "pin_number": 46,
+        "pin_name": "PCM_CLK",
+        "direction": "I",
+        "type": null,
+        "function": "PCM interface for audio",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            17
+          ]
+        }
+      },
+      {
+        "pin_number": 47,
+        "pin_name": "PCM_IN",
+        "direction": "I",
+        "type": null,
+        "function": "PCM interface for audio",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            17
+          ]
+        }
+      },
+      {
+        "pin_number": 48,
+        "pin_name": "PCM_OUT",
+        "direction": "O",
+        "type": null,
+        "function": "PCM interface for audio",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            17
+          ]
+        }
+      },
+      {
+        "pin_number": 49,
+        "pin_name": "STATUS",
+        "direction": "O",
+        "type": null,
+        "function": "Power on status",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            19
+          ]
+        }
+      },
+      {
+        "pin_number": 50,
+        "pin_name": "NETLIGHT",
+        "direction": "O",
+        "type": null,
+        "function": "Network status",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            19
+          ]
+        }
+      },
+      {
+        "pin_number": 51,
+        "pin_name": "GND",
+        "direction": null,
+        "type": "GND",
+        "function": "Ground",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            17
+          ]
+        }
+      },
+      {
+        "pin_number": 52,
+        "pin_name": "GND",
+        "direction": null,
+        "type": "GND",
+        "function": "Ground",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            17
+          ]
+        }
+      },
+      {
+        "pin_number": 53,
+        "pin_name": "BT_ANT",
+        "direction": "I/O",
+        "type": null,
+        "function": "Connect Bluetooth antenna",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            18
+          ]
+        }
+      },
+      {
+        "pin_number": 54,
+        "pin_name": "GND",
+        "direction": null,
+        "type": "GND",
+        "function": "Ground",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            17
+          ]
+        }
+      },
+      {
+        "pin_number": 55,
+        "pin_name": "KBR3",
+        "direction": "O",
+        "type": null,
+        "function": "Supports 16 buttons (4*4) by default",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            17
+          ]
+        }
+      },
+      {
+        "pin_number": 56,
+        "pin_name": "KBR2",
+        "direction": "O",
+        "type": null,
+        "function": "Supports 16 buttons (4*4) by default",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            17
+          ]
+        }
+      },
+      {
+        "pin_number": 57,
+        "pin_name": "KBR1",
+        "direction": "O",
+        "type": null,
+        "function": "Supports 16 buttons (4*4) by default",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            17
+          ]
+        }
+      },
+      {
+        "pin_number": 58,
+        "pin_name": "KBR0",
+        "direction": "O",
+        "type": null,
+        "function": "Supports 16 buttons (4*4) by default",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            17
+          ]
+        }
+      },
+      {
+        "pin_number": 59,
+        "pin_name": "KBC3",
+        "direction": "I",
+        "type": null,
+        "function": "Supports 16 buttons (4*4) by default",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            17
+          ]
+        }
+      },
+      {
+        "pin_number": 60,
+        "pin_name": "KBC2",
+        "direction": "I",
+        "type": null,
+        "function": "Supports 16 buttons (4*4) by default",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            17
+          ]
+        }
+      },
+      {
+        "pin_number": 61,
+        "pin_name": "KBC1",
+        "direction": "I",
+        "type": null,
+        "function": "Supports 16 buttons (4*4) by default",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            17
+          ]
+        }
+      },
+      {
+        "pin_number": 62,
+        "pin_name": "KBC0",
+        "direction": "I",
+        "type": null,
+        "function": "Supports 16 buttons (4*4) by default",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            17
+          ]
+        }
+      },
+      {
+        "pin_number": 63,
+        "pin_name": "RF_SYNC",
+        "direction": "O",
+        "type": null,
+        "function": "RF burst synchronous signal",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            18
+          ]
+        }
+      },
+      {
+        "pin_number": 64,
+        "pin_name": "GND",
+        "direction": null,
+        "type": "GND",
+        "function": "Ground",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            17
+          ]
+        }
+      },
+      {
+        "pin_number": 65,
+        "pin_name": "GND",
+        "direction": null,
+        "type": "GND",
+        "function": "Ground",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            17
+          ]
+        }
+      },
+      {
+        "pin_number": 66,
+        "pin_name": "GSM_ANT",
+        "direction": "I/O",
+        "type": null,
+        "function": "Connect GSM antenna",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            18
+          ]
+        }
+      },
+      {
+        "pin_number": 67,
+        "pin_name": "GND",
+        "direction": null,
+        "type": "GND",
+        "function": "Ground",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            17
+          ]
+        }
+      },
+      {
+        "pin_number": 68,
+        "pin_name": "GND",
+        "direction": null,
+        "type": "GND",
+        "function": "Ground",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            17
+          ]
+        }
+      }
+    ],
+    "reference_circuits": [
+      {
+        "named_circuit": "Reference circuit of the VBAT input (Figure 5)",
+        "what_pdf_shows": "VBAT input reference diagram with CA/CB, 33pF, 10pF and a 5.1V/500mW Zener diode; the text recommends a low-ESR 100 µF decoupling capacitor and placement close to VBAT pins.",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            21
+          ]
+        }
+      },
+      {
+        "named_circuit": "Reference circuit of the LDO power supply (Figure 6)",
+        "what_pdf_shows": "A DC-input MIC29302 LDO circuit with listed capacitors, resistor network and VBAT output.",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            22
+          ]
+        }
+      },
+      {
+        "named_circuit": "Reference circuit of the DC-DC power supply (Figure 7)",
+        "what_pdf_shows": "A DC-input LM2596-ADJ circuit with L101, FB101, MBR360, capacitors and resistor network feeding VBAT.",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            22
+          ]
+        }
+      },
+      {
+        "named_circuit": "Powered on/down module using transistor (Figure 10)",
+        "what_pdf_shows": "PWRKEY power-on/down logic shown with 3V, 100K, 1K, 4.7K and 47K labels.",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            23
+          ]
+        }
+      },
+      {
+        "named_circuit": "Powered on/down module using button (Figure 11)",
+        "what_pdf_shows": "Button-based PWRKEY power-on/down logic shown with 3V, 100K and 1K labels.",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            24
+          ]
+        }
+      },
+      {
+        "named_circuit": "Reset circuit (Figure 15)",
+        "what_pdf_shows": "Internal RESET circuit diagram labeled 1.8V and 4.7K.",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            27
+          ]
+        }
+      },
+      {
+        "named_circuit": "SIM808 with battery charger and pack connection (Figure 17)",
+        "what_pdf_shows": "A 5V charger connection to the module and battery pack via VBUS/VBAT is shown.",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            29
+          ]
+        }
+      },
+      {
+        "named_circuit": "RTC supply from capacitor (Figure 18)",
+        "what_pdf_shows": "External large-capacitance capacitor connected through VRTC and a shown 1.5K path to the RTC core.",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            31
+          ]
+        }
+      },
+      {
+        "named_circuit": "RTC supply from non-chargeable battery (Figure 19)",
+        "what_pdf_shows": "Non-chargeable backup battery connected through VRTC and a shown 1.5K path to the RTC core.",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            31
+          ]
+        }
+      },
+      {
+        "named_circuit": "RTC supply from rechargeable battery (Figure 20)",
+        "what_pdf_shows": "Rechargeable backup battery connected through VRTC and a shown 1.5K path to the RTC core.",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            32
+          ]
+        }
+      },
+      {
+        "named_circuit": "Connection of the serial port (Figure 21)",
+        "what_pdf_shows": "Module-to-DTE connection for TXD, RXD, RTS, CTS, DTR, DCD, RI/RING and GND.",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            34
+          ]
+        }
+      },
+      {
+        "named_circuit": "Level converting by resistor (Figure 22)",
+        "what_pdf_shows": "Module-to-3.3V-DTE serial interconnection with 1K and 5.6K resistor labels.",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            35
+          ]
+        }
+      },
+      {
+        "named_circuit": "Isolation circuit by diodes (Figure 23)",
+        "what_pdf_shows": "VDD_EXT and 10K diode-isolation serial circuit between module and DTE.",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            35
+          ]
+        }
+      },
+      {
+        "named_circuit": "TX level converting by transistor (Figure 24)",
+        "what_pdf_shows": "Module TXD to DTE RXD level-conversion diagram with VDD_EXT/VDD and 4.7K/47K values.",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            35
+          ]
+        }
+      },
+      {
+        "named_circuit": "RX level converting by transistor (Figure 25)",
+        "what_pdf_shows": "Module RXD to DTE TXD level-conversion diagram with VDD_EXT/VDD and 4.7K/47K values.",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            36
+          ]
+        }
+      },
+      {
+        "named_circuit": "USB reference circuit (Figure 26)",
+        "what_pdf_shows": "Module-to-USB connection for VBUS, USB_DN, USB_DP, GND and a 1uF capacitor to ID.",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            36
+          ]
+        }
+      },
+      {
+        "named_circuit": "Speaker reference circuit (Figure 31)",
+        "what_pdf_shows": "SPK1P/SPK1N differential speaker circuit with 10pF/33pF components and ESD anti labels.",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            39
+          ]
+        }
+      },
+      {
+        "named_circuit": "Speaker with amplifier reference circuit (Figure 32)",
+        "what_pdf_shows": "Differential SPK1P/SPK1N connection to an amplifier circuit with 10pF/33pF components and ESD anti labels.",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            39
+          ]
+        }
+      },
+      {
+        "named_circuit": "Microphone reference circuit (Figure 33)",
+        "what_pdf_shows": "MIC1P/MIC1N differential electret microphone circuit with 33pF/10pF components and ESD label.",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            40
+          ]
+        }
+      },
+      {
+        "named_circuit": "Reference circuit of the 8-pin SIM card holder (Figure 34)",
+        "what_pdf_shows": "SIM_VDD, SIM_RST, SIM_CLK, SIM_DET and SIM_DATA connection to a MOLEX 91228 holder, including a 4.7K and 100nF component.",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            41
+          ]
+        }
+      },
+      {
+        "named_circuit": "Reference circuit of the 6-pin SIM card holder (Figure 35)",
+        "what_pdf_shows": "SIM interface connection to C707 10M006 512 2 with three 33pF elements marked NC and a 100nF component.",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            42
+          ]
+        }
+      },
+      {
+        "named_circuit": "PCM reference circuit (Figure 38)",
+        "what_pdf_shows": "Module-to-CODEC connection of PCM_IN/PCMOUT, PCM_OUT/PCMIN, PCM_SYNC/PCMSYNC, PCM_CLK/PCMCLK and GND.",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            45
+          ]
+        }
+      },
+      {
+        "named_circuit": "Traditional keypad reference circuit (Figure 39)",
+        "what_pdf_shows": "KBC0–KBC3 and KBR0–KBR3 keypad connection diagram.",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            46
+          ]
+        }
+      },
+      {
+        "named_circuit": "Enhance the ESD performance of keypad circuit (Figure 40)",
+        "what_pdf_shows": "A KBCx/KBRx keypad circuit with a resistor marked <1K.",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            46
+          ]
+        }
+      },
+      {
+        "named_circuit": "Reference circuit of PWM drive buzzer (Figure 42)",
+        "what_pdf_shows": "PWM buzzer-drive diagram with VBAT, 4.7K and 47K labels.",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            49
+          ]
+        }
+      },
+      {
+        "named_circuit": "Reference circuit of NETLIGHT (Figure 43)",
+        "what_pdf_shows": "NETLIGHT indicator circuit with VBAT, a resistor R, 4.7K and 47K labels.",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            50
+          ]
+        }
+      },
+      {
+        "named_circuit": "GSM antenna matching circuit (Figure 45)",
+        "what_pdf_shows": "GSM_ANT-to-RF-connector/antenna circuit with matching positions R101, C101 and C102.",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            53
+          ]
+        }
+      },
+      {
+        "named_circuit": "GSM simple antenna matching circuit (Figure 46)",
+        "what_pdf_shows": "Simplified GSM_ANT-to-antenna matching circuit with R101, C101 and C102 positions.",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            54
+          ]
+        }
+      },
+      {
+        "named_circuit": "Bluetooth antenna matching circuit (Figure 47)",
+        "what_pdf_shows": "BT_ANT-to-Bluetooth-antenna circuit with matching positions R201, C201 and C202.",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            54
+          ]
+        }
+      },
+      {
+        "named_circuit": "GNSS passive antenna matching circuit (Figure 48)",
+        "what_pdf_shows": "GPS_ANT-to-passive-GPS-antenna circuit with matching positions R101, C101 and C102.",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            55
+          ]
+        }
+      },
+      {
+        "named_circuit": "GNSS active antenna matching circuit (Figure 49)",
+        "what_pdf_shows": "GPS_ANT active-antenna circuit with VCC_ANT, R102 10Ω, L101 27nH and matching positions R101/C101/C102.",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            55
+          ]
+        }
+      }
+    ],
+    "pcb_considerations": [
+      {
+        "assertion": "Power traces from VBAT to the supply must be at least 80mil wide; the power IC and bypass capacitor should be as close to the module as possible.",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            23
+          ]
+        }
+      },
+      {
+        "assertion": "For antenna/RF layout: keep the conducted-test RF connector close to GSM_ANT, place matching close to the antenna, control RF traces to 50Ω, and keep them away from high-speed signals and strong disturbing sources.",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            56
+          ]
+        }
+      },
+      {
+        "assertion": "If RF cable is used, keep it away from the SIM card and power ICs; place GSM and Bluetooth antennas as far apart as possible.",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            56
+          ]
+        }
+      },
+      {
+        "assertion": "VBAT positive routing should be short and wide; the prescribed flow from source to VBAT goes through the Zener diode then a large capacitor. Pins 1, 2 and 3 should have the shortest layout to the power-source ground.",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            56
+          ]
+        }
+      },
+      {
+        "assertion": "The 15 middle GND pads enhance GND performance; do not route signals on their upper layer if possible.",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            56
+          ]
+        }
+      },
+      {
+        "assertion": "Place the SIM holder far from antenna/RF cable and near the module; add ESD protection to clock, data, reset and SIM_VDD, and keep these signals away from power and high-speed-frequency signals.",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            56
+          ]
+        }
+      },
+      {
+        "assertion": "Audio traces should be surrounded by ground, kept away from antenna and power, and not routed parallel to VBAT.",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            57
+          ]
+        }
+      },
+      {
+        "assertion": "UART signal lines should be routed bunched, as should USB and I2C signals.",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            57
+          ]
+        }
+      },
+      {
+        "assertion": "USB_DP and USB_DN should be routed as differential traces.",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            36
+          ]
+        }
+      },
+      {
+        "assertion": "Audio signals are to follow differential signal-layout rules.",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            39,
+            40
+          ]
+        }
+      }
+    ],
+    "antenna_requirements": [
+      {
+        "assertion": "SIM808 has GSM_ANT, BT_ANT and GPS_ANT; all antenna-port RF interfaces have 50Ω impedance.",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            52
+          ]
+        }
+      },
+      {
+        "assertion": "Antenna input impedance should be 50Ω and VSWR should be less than 2; application-board antenna traces should be 50Ω controlled impedance.",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            53
+          ]
+        }
+      },
+      {
+        "assertion": "Place the three antennas far apart; isolation among them should exceed 30dB.",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            53
+          ]
+        }
+      },
+      {
+        "assertion": "GSM antenna connection must be DC-decoupled because the connector is DC-coupled to ground via an inductor for ESD protection; proper external antenna matching is necessary.",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            53
+          ]
+        }
+      },
+      {
+        "assertion": "GSM matching values depend on antenna debug; normally R101 is 0Ω and C101/C102 are not mounted.",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            53
+          ]
+        }
+      },
+      {
+        "assertion": "Bluetooth matching values depend on antenna debug; normally R201 is 0Ω and C201/C202 are not mounted.",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            54
+          ]
+        }
+      },
+      {
+        "assertion": "GNSS can use passive or active antennas; selection is based on product design and other conditions, and proper matching is necessary.",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            54,
+            55
+          ]
+        }
+      },
+      {
+        "assertion": "For GNSS passive matching, component values can only be obtained after antenna tuning; normally R101 is 0Ω and C101/C102 are not mounted.",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            55
+          ]
+        }
+      },
+      {
+        "assertion": "For an active GNSS antenna, VCC_ANT is required on the application board; L101 prevents RF leakage into the VCC_ANT path and routes bias, with recommended value no less than 27nH.",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            55
+          ]
+        }
+      }
+    ],
+    "protection_circuits": [
+      {
+        "assertion": "A 5.1V/500mW Zener diode is strongly recommended on VBAT to prevent surge damage; it and the capacitors should be close to VBAT pins.",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            21
+          ]
+        }
+      },
+      {
+        "assertion": "SIM signals should be protected against ESD with a TVS diode array; the SIM-card section recommends an ESD protection component such as ON SMF12CT1G.",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            18,
+            41
+          ]
+        }
+      },
+      {
+        "assertion": "SIM-card TVS parasitic capacitance should not exceed 50pF.",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            42
+          ]
+        }
+      },
+      {
+        "assertion": "Maximum allowable TVS capacitive load on a USB data line should be less than 5pF; examples given are ESD9L5.0ST5G and ESD9M5.0ST5G.",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            36
+          ]
+        }
+      },
+      {
+        "assertion": "A series RESET resistor can enhance ESD performance but must be less than 100Ω.",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            27
+          ]
+        }
+      },
+      {
+        "assertion": "A keypad resistor less than 1KΩ can enhance keypad ESD performance.",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            46
+          ]
+        }
+      },
+      {
+        "assertion": "For UART ESD consideration, the datasheet suggests 100ohm series resistances on UART lines.",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            61
+          ]
+        }
+      },
+      {
+        "assertion": "In the active GNSS antenna circuit, R102 can protect the whole circuit if the active antenna is shorted to ground.",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            55
+          ]
+        }
+      },
+      {
+        "assertion": "The speaker and microphone reference diagrams show ESD anti/ESD elements alongside the differential audio connections.",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            39,
+            40
+          ]
+        }
+      }
+    ]
+  },
+  "validation_tests": {
+    "functional": [
+      {
+        "test": "PWRKEY power-on readiness behavior",
+        "method/procedure": "Pull PWRKEY low for at least 1 second and release; the power-on timing is illustrated.",
+        "explicit_pass_fail_criteria": "After power-on is complete, the module sends RDY to indicate it is ready to operate at fixed baud rate; the document says RDY does not appear until autobauding is active.",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            23,
+            24
+          ]
+        }
+      },
+      {
+        "test": "PWRKEY normal power-off behavior",
+        "method/procedure": "Pull PWRKEY low for at least 1.5 seconds and release; the timing is illustrated.",
+        "explicit_pass_fail_criteria": "Before completion, the module sends NORMAL POWER DOWN; STATUS is low in power-off mode.",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            25,
+            26
+          ]
+        }
+      },
+      {
+        "test": "GNSS power-on behavior",
+        "method/procedure": "With the GSM engine powered on and not in sleep mode, send AT+CGNSSPWR=1 as written in the GNSS operating-mode prose.",
+        "explicit_pass_fail_criteria": "The document states that, after power-on, the GNSS engine automatically acquires and tracks GNSS satellites.",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            52
+          ]
+        }
+      },
+      {
+        "test": "1PPS output availability",
+        "method/procedure": "Obtain successful positioning.",
+        "explicit_pass_fail_criteria": "The document states that the 1PPS pulse signal comes out after successful positioning.",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            52
+          ]
+        }
+      },
+      {
+        "test": "GNSS performance characterization",
+        "method/procedure": "Table 2 gives performance values and notes conditions including 50% 24hr static at -130dBm, 50% at 30m/s, GNSS signal level -130dBm, and single 3.8V supply at -130dBm/GSM IDLE for power consumption.",
+        "explicit_pass_fail_criteria": null,
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            12
+          ]
+        }
+      }
+    ],
+    "communication": [
+      {
+        "test": "Conducted GSM RF output-power characterization",
+        "method/procedure": "The document gives conducted output-power tables and states they follow 3GPP TS 05.05 technical-specification requirements.",
+        "explicit_pass_fail_criteria": "At GSM900/GSM850, output power should not exceed 33dBm, with maximum-level tolerance no more than ±2dB normal and ±2.5dB extreme; at DCS1800/PCS1900, it should not exceed 30dBm with the same respective maximum-level tolerances.",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            61,
+            62
+          ]
+        }
+      },
+      {
+        "test": "Conducted RF receive-sensitivity characterization",
+        "method/procedure": "The receive-sensitivity table is stated to be tested under static condition.",
+        "explicit_pass_fail_criteria": null,
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            63
+          ]
+        }
+      },
+      {
+        "test": "Bluetooth receiver-sensitivity characterization",
+        "method/procedure": "Table 3 reports receiver sensitivity for DH1 and DH5 at BER<0.1%, plus EDR receiver sensitivity for 2-DH5 and 3-DH5.",
+        "explicit_pass_fail_criteria": null,
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            12
+          ]
+        }
+      }
+    ],
+    "power": [
+      {
+        "test": "VBAT transmit-burst voltage-drop characterization",
+        "method/procedure": "The illustrated test condition is VBAT=4.0V, CA=100µF tantalum (ESR=0.7Ω), and CB=1µF during maximum power transmit phase.",
+        "explicit_pass_fail_criteria": null,
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            22
+          ]
+        }
+      },
+      {
+        "test": "GSM current-consumption characterization",
+        "method/procedure": "Table 42 is headed VBAT=4V with GNSS engine powered down and reports laboratory typical current values for the listed modes.",
+        "explicit_pass_fail_criteria": null,
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            60,
+            61
+          ]
+        }
+      },
+      {
+        "test": "VBAT over-/under-voltage response",
+        "method/procedure": "Apply the documented threshold conditions: ≤3.5V / ≥4.3V warning, and <3.4V / >4.4V power-down conditions.",
+        "explicit_pass_fail_criteria": "The expected warnings are UNDER-VOLTAGE WARNNING or OVER-VOLTAGE WARNNING; below 3.4V or above 4.4V, the expected report is the respective POWER DOWN URC and automatic power-off.",
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            26
+          ]
+        }
+      }
+    ],
+    "environmental": [
+      {
+        "test": "Electro-static-discharge test results",
+        "method/procedure": "The ESD table is stated at temperature 25℃ and humidity 45%, and reports contact- and air-discharge results by pin group.",
+        "explicit_pass_fail_criteria": null,
+        "source": {
+          "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+          "pages": [
+            61
+          ]
+        }
+      }
+    ]
+  },
+  "version_differences": [],
+  "missing_data": [
+    {
+      "field": "technical_specs.package_type",
+      "reason": "The supplied source describes 68 SMT pads but does not explicitly declare a package type/name.",
+      "attempted_sources": [
+        {
+          "source_pdf": "SIM808_Hardware Design_V1.03.txt",
+          "pages": [
+            10,
+            16,
+            17,
+            18,
+            19
+          ]
+        }
+      ]
+    },
+    {
+      "field": "at_commands.complete_command_coverage",
+      "reason": "A separate SIM808 Series AT Command Manual is referenced but was not supplied; command references in the hardware document do not provide complete syntax, responses, or a revision-specific support matrix.",
+      "attempted_sources": [
+        {
+          "source_pdf": "SIM808_Hardware Design_V1.03.txt",
+          "pages": [
+            11,
+            23,
+            28,
+            39,
+            42,
+            47,
+            48,
+            49,
+            52,
+            66
+          ]
+        }
+      ]
+    },
+    {
+      "field": "validation_tests.explicit_pass_fail_criteria",
+      "reason": "The source gives characterization data or conditions but no explicit pass/fail criteria for the records whose criteria are null (GNSS performance, receive sensitivity, Bluetooth sensitivity, VBAT drop, current consumption, and ESD).",
+      "attempted_sources": [
+        {
+          "source_pdf": "SIM808_Hardware Design_V1.03.txt",
+          "pages": [
+            12,
+            22,
+            60,
+            61,
+            63
+          ]
+        }
+      ]
+    },
+    {
+      "field": "version_differences",
+      "reason": "Only version 1.03 of the SIM808 hardware-design source was supplied. The version-history change notes do not provide a second edition for direct fact-by-fact comparison.",
+      "attempted_sources": [
+        {
+          "source_pdf": "SIM808_Hardware Design_V1.03.txt",
+          "pages": [
+            2,
+            9
+          ]
+        }
+      ]
+    }
+  ],
+  "ambiguities": [
+    {
+      "issue": "The text extraction contains no readable content of the Figure 2 pinout graphic; complete pinout records are consequently taken from Table 6 rather than inferred from the diagram.",
+      "source": {
+        "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+        "pages": [
+          16,
+          17,
+          18,
+          19
+        ]
+      }
+    },
+    {
+      "issue": "The Figure 3 package-dimensions drawing exposes only its unit in the extracted text. The dimensions field uses the explicit “Size: 24*24*2.6mm” text rather than assigning drawing axes or tolerances.",
+      "source": {
+        "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+        "pages": [
+          11,
+          19
+        ]
+      }
+    },
+    {
+      "issue": "On physical page 52, Table 34 spells the GNSS power command AT+CGNSPWR, while the operating-mode prose spells it AT+CGNSSPWR=1 and AT+CGNSSPWR=0. The source does not resolve whether this is a document typo or extraction issue; neither spelling was normalized.",
+      "source": {
+        "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+        "pages": [
+          52
+        ]
+      }
+    },
+    {
+      "issue": "The introductory overview describes “GPRS multi-slot class 12/ class 10 (optional),” while Table 1 says class 12 default and class 1–12 optional. Both explicit source statements are retained rather than reconciled.",
+      "source": {
+        "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+        "pages": [
+          10,
+          11
+        ]
+      }
+    },
+    {
+      "issue": "GNSS Table 2 column alignment/labels are text-extraction-sensitive (the header reads “Min / Type / Max”); no Table-2 numerical-performance values are used as core technical-spec values in this JSON.",
+      "source": {
+        "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+        "pages": [
+          12
+        ]
+      }
+    },
+    {
+      "issue": "Physical page 55 refers to the active GNSS circuit as “Figure 54,” but its caption in the supplied text is Figure 49; the cited physical page is preserved.",
+      "source": {
+        "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+        "pages": [
+          55
+        ]
+      }
+    },
+    {
+      "issue": "The version-history page's footer displays printed page 8 although it is physical PDF page 9 after form-feed counting; all citations here use physical page numbers.",
+      "source": {
+        "source_pdf": "SIM808_Hardware Design_V1.03.pdf",
+        "pages": [
+          9
+        ]
+      }
+    }
+  ]
+}

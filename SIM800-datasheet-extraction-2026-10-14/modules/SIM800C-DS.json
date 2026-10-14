@@ -1,0 +1,2463 @@
+{
+  "schema_version": "1.0",
+  "module": "SIM800C-DS",
+  "source_documents": [
+    {
+      "filename": "SIM800C-DS_Hardware_Design_V1.01.txt",
+      "document_title": "SIM800C-DS Hardware Design",
+      "version": "V1.01",
+      "date": "2016-07-04",
+      "source": {
+        "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+        "pages": [
+          2
+        ]
+      }
+    }
+  ],
+  "technical_specs": {
+    "operating_voltage": [
+      {
+        "value": "3.4 to 4.4 (recommended voltage: 4.0)",
+        "unit": "V",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            20
+          ]
+        }
+      },
+      {
+        "value": "min 3.4; typ 4.0; max 4.4",
+        "unit": "V",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            46
+          ]
+        }
+      },
+      {
+        "value": "input must not drop below 3.0 during a transmit burst",
+        "unit": "V",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            21
+          ]
+        }
+      }
+    ],
+    "current_consumption": [
+      {
+        "value": "Power saving — typical power consumption in sleep mode (AT+CFUN=0): typical power consumption: 0.8",
+        "unit": "mA",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            11
+          ]
+        }
+      },
+      {
+        "value": "Function mode — AT+CFUN=0, minimum functionality: 0.8",
+        "unit": "mA",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            24
+          ]
+        }
+      },
+      {
+        "value": "Function mode — AT+CFUN=1, BS-PA-MFRMS=9: 0.93",
+        "unit": "mA",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            24
+          ]
+        }
+      },
+      {
+        "value": "Function mode — AT+CFUN=1, BS-PA-MFRMS=5: 1.06",
+        "unit": "mA",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            24
+          ]
+        }
+      },
+      {
+        "value": "Function mode — AT+CFUN=1, BS-PA-MFRMS=2: 1.6",
+        "unit": "mA",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            24
+          ]
+        }
+      },
+      {
+        "value": "Function mode — AT+CFUN=4, flight mode: 0.76",
+        "unit": "mA",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            24
+          ]
+        }
+      },
+      {
+        "value": "Power off mode: typ 130; max 150",
+        "unit": "uA",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            48
+          ]
+        }
+      },
+      {
+        "value": "Sleep mode (AT+CFUN=1), BS-PA-MFRMS=9: 0.93",
+        "unit": "mA",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            48
+          ]
+        }
+      },
+      {
+        "value": "Sleep mode (AT+CFUN=1), BS-PA-MFRMS=5: 1.06",
+        "unit": "mA",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            48
+          ]
+        }
+      },
+      {
+        "value": "Sleep mode (AT+CFUN=1), BS-PA-MFRMS=2: 1.58",
+        "unit": "mA",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            48
+          ]
+        }
+      },
+      {
+        "value": "Idle mode (AT+CFUN=1), GSM850: 12.8",
+        "unit": "mA",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            48
+          ]
+        }
+      },
+      {
+        "value": "Idle mode (AT+CFUN=1), EGSM900: 12.8",
+        "unit": "mA",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            48
+          ]
+        }
+      },
+      {
+        "value": "Idle mode (AT+CFUN=1), DCS1800: 12.8",
+        "unit": "mA",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            48
+          ]
+        }
+      },
+      {
+        "value": "Idle mode (AT+CFUN=1), PCS1900: 12.8",
+        "unit": "mA",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            48
+          ]
+        }
+      },
+      {
+        "value": "Voice call (PCL=5), GSM850: 208",
+        "unit": "mA",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            48
+          ]
+        }
+      },
+      {
+        "value": "Voice call (PCL=5), EGSM900: 220",
+        "unit": "mA",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            48
+          ]
+        }
+      },
+      {
+        "value": "Voice call (PCL=0), DCS1800: 141",
+        "unit": "mA",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            48
+          ]
+        }
+      },
+      {
+        "value": "Voice call (PCL=0), PCS1900: 152",
+        "unit": "mA",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            48
+          ]
+        }
+      },
+      {
+        "value": "Data mode GPRS (1Rx,4Tx), GSM850: 371",
+        "unit": "mA",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            48
+          ]
+        }
+      },
+      {
+        "value": "Data mode GPRS (1Rx,4Tx), EGSM900: 393",
+        "unit": "mA",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            48
+          ]
+        }
+      },
+      {
+        "value": "Data mode GPRS (1Rx,4Tx), DCS1800: 267",
+        "unit": "mA",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            48
+          ]
+        }
+      },
+      {
+        "value": "Data mode GPRS (1Rx,4Tx), PCS1900: 286",
+        "unit": "mA",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            48
+          ]
+        }
+      },
+      {
+        "value": "Data mode GPRS (3Rx,2Tx), GSM850: 314",
+        "unit": "mA",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            48
+          ]
+        }
+      },
+      {
+        "value": "Data mode GPRS (3Rx,2Tx), EGSM900: 335",
+        "unit": "mA",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            48
+          ]
+        }
+      },
+      {
+        "value": "Data mode GPRS (3Rx,2Tx), DCS1800: 204",
+        "unit": "mA",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            48
+          ]
+        }
+      },
+      {
+        "value": "Data mode GPRS (3Rx,2Tx), PCS1900: 237",
+        "unit": "mA",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            48
+          ]
+        }
+      },
+      {
+        "value": "Data mode GPRS (4Rx,1Tx), GSM850: 212",
+        "unit": "mA",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            48
+          ]
+        }
+      },
+      {
+        "value": "Data mode GPRS (4Rx,1Tx), EGSM900: 223",
+        "unit": "mA",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            48
+          ]
+        }
+      },
+      {
+        "value": "Data mode GPRS (4Rx,1Tx), DCS1800: 147",
+        "unit": "mA",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            48
+          ]
+        }
+      },
+      {
+        "value": "Data mode GPRS (4Rx,1Tx), PCS1900: 158",
+        "unit": "mA",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            48
+          ]
+        }
+      },
+      {
+        "value": "Peak current during Tx burst: 2.0",
+        "unit": "A",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            48
+          ]
+        }
+      }
+    ],
+    "consumption_modes": [
+      {
+        "value": "Minimum functionality: AT+CFUN=0; RF function and SIM card function are disabled; serial port remains accessible.",
+        "unit": null,
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            24
+          ]
+        }
+      },
+      {
+        "value": "Sleep mode 1: AT+CSCLK=1; controlled by DTR; module can receive paging or SMS but serial port is not accessible.",
+        "unit": null,
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            25
+          ]
+        }
+      },
+      {
+        "value": "Sleep mode 2: AT+CSCLK=2; enters automatically after more than 5 seconds without RXD data and with no on-air/hardware interrupt; can receive paging or SMS.",
+        "unit": null,
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            25
+          ]
+        }
+      },
+      {
+        "value": "Flight mode: AT+CFUN=4; disables RF function.",
+        "unit": null,
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            24
+          ]
+        }
+      }
+    ],
+    "frequency_bands": [
+      {
+        "value": "GSM850: receive 869–894; transmit 824–849",
+        "unit": "MHz",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            50
+          ]
+        }
+      },
+      {
+        "value": "EGSM900: receive 925–960; transmit 880–915",
+        "unit": "MHz",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            50
+          ]
+        }
+      },
+      {
+        "value": "DCS1800: receive 1805–1880; transmit 1710–1785",
+        "unit": "MHz",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            50
+          ]
+        }
+      },
+      {
+        "value": "PCS1900: receive 1930–1990; transmit 1850–1910",
+        "unit": "MHz",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            50
+          ]
+        }
+      }
+    ],
+    "dimensions": {
+      "value": "17.6 × 15.7 × 2.3",
+      "unit": "mm",
+      "source": {
+        "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+        "pages": [
+          11
+        ]
+      }
+    },
+    "weight": {
+      "value": "1.3",
+      "unit": "g",
+      "source": {
+        "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+        "pages": [
+          11
+        ]
+      }
+    },
+    "operating_temperature": {
+      "value": "min -40; typ +25; max +85",
+      "unit": "℃",
+      "source": {
+        "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+        "pages": [
+          46
+        ]
+      }
+    },
+    "package_type": {
+      "value": "SMT+LGA package with 77 pads",
+      "unit": null,
+      "source": {
+        "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+        "pages": [
+          10
+        ]
+      }
+    },
+    "SIM_card_type": [
+      {
+        "value": "1.8V and 3.0V SIM card supported",
+        "unit": "V",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            33
+          ]
+        }
+      },
+      {
+        "value": "GSM Phase 1 and GSM Phase 2+ FAST 64kbps SIM card",
+        "unit": null,
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            33
+          ]
+        }
+      }
+    ],
+    "GNSS_GPS_support": null,
+    "Bluetooth": {
+      "value": "Support Bluetooth (need software support)",
+      "unit": null,
+      "source": {
+        "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+        "pages": [
+          10
+        ]
+      }
+    },
+    "GPRS_class": [
+      {
+        "value": "GPRS multi-slot class10/class12 (optional)",
+        "unit": null,
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            10
+          ]
+        }
+      },
+      {
+        "value": "GPRS multi-slot class 12 (default)",
+        "unit": null,
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            11
+          ]
+        }
+      },
+      {
+        "value": "GPRS multi-slot class 1–12 (option)",
+        "unit": null,
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            11
+          ]
+        }
+      }
+    ],
+    "data_rate": [
+      {
+        "value": "GPRS data downlink transfer: max. 85.6",
+        "unit": "kbps",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            11
+          ]
+        }
+      },
+      {
+        "value": "GPRS data uplink transfer: max. 85.6",
+        "unit": "kbps",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            11
+          ]
+        }
+      },
+      {
+        "value": "CS-1: 1 timeslot 9.05; 2 timeslot 18.1; 4 timeslot 36.2",
+        "unit": "kbps",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            12
+          ]
+        }
+      },
+      {
+        "value": "CS-2: 1 timeslot 13.4; 2 timeslot 26.8; 4 timeslot 53.6",
+        "unit": "kbps",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            12
+          ]
+        }
+      },
+      {
+        "value": "CS-3: 1 timeslot 15.6; 2 timeslot 31.2; 4 timeslot 62.4",
+        "unit": "kbps",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            12
+          ]
+        }
+      },
+      {
+        "value": "CS-4: 1 timeslot 21.4; 2 timeslot 42.8; 4 timeslot 85.6",
+        "unit": "kbps",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            12
+          ]
+        }
+      }
+    ]
+  },
+  "at_commands": {
+    "catalog_ref": "../shared_at_command_catalog.json",
+    "source_scope_note": {
+      "note": "The supplied hardware document refers readers to the SIM800 Series AT Command Manual for command details; that family-level manual is not proof that every family command is supported by SIM800C-DS. Only commands explicitly named in this module document are listed below.",
+      "source": {
+        "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+        "pages": [
+          22,
+          53
+        ]
+      }
+    },
+    "module_specific_features": [
+      {
+        "command": "AT+CBAND",
+        "explicit_module_use": "Sets the frequency bands; the module can search the four bands automatically.",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            11
+          ]
+        }
+      },
+      {
+        "command": "AT+CBC",
+        "explicit_module_use": "Monitors VBAT voltage.",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            22
+          ]
+        }
+      },
+      {
+        "command": "AT+IPR=x",
+        "explicit_module_use": "Sets and saves a fixed baud rate in non-volatile flash memory.",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            22,
+            27
+          ]
+        }
+      },
+      {
+        "command": "AT+CPOWD=1",
+        "explicit_module_use": "Normal power-off procedure.",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            23
+          ]
+        }
+      },
+      {
+        "command": "AT+CSCLK=1",
+        "explicit_module_use": "Sets sleep mode 1, controlled by DTR.",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            24,
+            25
+          ]
+        }
+      },
+      {
+        "command": "AT+CSCLK=2",
+        "explicit_module_use": "Sets sleep mode 2.",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            25
+          ]
+        }
+      },
+      {
+        "command": "AT+CFUN=<fun>",
+        "explicit_module_use": "Sets functionality level: 0 minimum functionality, 1 full functionality (default), or 4 flight mode.",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            24
+          ]
+        }
+      },
+      {
+        "command": "AT+IFC=2,2",
+        "explicit_module_use": "Enables hardware flow control.",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            26
+          ]
+        }
+      },
+      {
+        "command": "AT+IFC=0,0",
+        "explicit_module_use": "Disables hardware flow control.",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            26
+          ]
+        }
+      },
+      {
+        "command": "AT+CMIC",
+        "explicit_module_use": "Adjusts microphone input gain level.",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            32
+          ]
+        }
+      },
+      {
+        "command": "AT+SIDET",
+        "explicit_module_use": "Sets side-tone level.",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            32
+          ]
+        }
+      },
+      {
+        "command": "AT+CLVL",
+        "explicit_module_use": "Adjusts output gain level.",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            32
+          ]
+        }
+      },
+      {
+        "command": "AT+CSDT",
+        "explicit_module_use": "Enables or disables SIM-card detection.",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            34
+          ]
+        }
+      },
+      {
+        "command": "AT+CADC",
+        "explicit_module_use": "Reads the auxiliary ADC voltage value.",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            39
+          ]
+        }
+      }
+    ],
+    "missing_data": [
+      {
+        "field": "Complete SIM800C-DS AT-command support matrix and command syntax/response details",
+        "reason": "Not supplied. The hardware document points to a separate SIM800 Series AT Command Manual for details; a family-level manual would not establish per-model support.",
+        "attempted_source": "SIM800C-DS_Hardware_Design_V1.01.txt"
+      }
+    ]
+  },
+  "hardware_design": {
+    "pinout": [
+      {
+        "pin_number": 1,
+        "pin_name": "UART1_TXD",
+        "direction_type": "O",
+        "function": "Transmit data",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            15
+          ]
+        }
+      },
+      {
+        "pin_number": 2,
+        "pin_name": "UART1_RXD",
+        "direction_type": "I",
+        "function": "Receive data",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            15
+          ]
+        }
+      },
+      {
+        "pin_number": 3,
+        "pin_name": "UART1_RTS",
+        "direction_type": "I",
+        "function": "Request to send",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            15
+          ]
+        }
+      },
+      {
+        "pin_number": 4,
+        "pin_name": "UART1_CTS",
+        "direction_type": "O",
+        "function": "Clear to send",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            15
+          ]
+        }
+      },
+      {
+        "pin_number": 5,
+        "pin_name": "UART1_DCD",
+        "direction_type": "O",
+        "function": "Data carrier detect",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            15
+          ]
+        }
+      },
+      {
+        "pin_number": 6,
+        "pin_name": "UART1_DTR",
+        "direction_type": "I",
+        "function": "Data terminal ready",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            15
+          ]
+        }
+      },
+      {
+        "pin_number": 7,
+        "pin_name": "UART1_RI",
+        "direction_type": "O",
+        "function": "Ring indicator",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            15
+          ]
+        }
+      },
+      {
+        "pin_number": 8,
+        "pin_name": "GND",
+        "direction_type": "Ground",
+        "function": "Ground",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            14,
+            15,
+            44
+          ]
+        }
+      },
+      {
+        "pin_number": 9,
+        "pin_name": "MICP",
+        "direction_type": "I",
+        "function": "Differential audio input",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            15
+          ]
+        }
+      },
+      {
+        "pin_number": 10,
+        "pin_name": "MICN",
+        "direction_type": "I",
+        "function": "Differential audio input",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            15
+          ]
+        }
+      },
+      {
+        "pin_number": 11,
+        "pin_name": "SPK1P",
+        "direction_type": "O",
+        "function": "Differential audio output",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            15
+          ]
+        }
+      },
+      {
+        "pin_number": 12,
+        "pin_name": "SPK1N",
+        "direction_type": "O",
+        "function": "Differential audio output",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            15
+          ]
+        }
+      },
+      {
+        "pin_number": 13,
+        "pin_name": "GND",
+        "direction_type": "Ground",
+        "function": "Ground",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            14,
+            15,
+            44
+          ]
+        }
+      },
+      {
+        "pin_number": 14,
+        "pin_name": "SIM1_DET",
+        "direction_type": "I",
+        "function": "SIM card detection",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            16
+          ]
+        }
+      },
+      {
+        "pin_number": 15,
+        "pin_name": "SIM1_DATA",
+        "direction_type": "I/O",
+        "function": "SIM data input/output",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            16
+          ]
+        }
+      },
+      {
+        "pin_number": 16,
+        "pin_name": "SIM1_CLK",
+        "direction_type": "O",
+        "function": "SIM clock",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            16
+          ]
+        }
+      },
+      {
+        "pin_number": 17,
+        "pin_name": "SIM1_RST",
+        "direction_type": "O",
+        "function": "SIM reset",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            16
+          ]
+        }
+      },
+      {
+        "pin_number": 18,
+        "pin_name": "SIM1_VDD",
+        "direction_type": "O",
+        "function": "Voltage supply for SIM card; supports 1.8V or 3V SIM card",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            16
+          ]
+        }
+      },
+      {
+        "pin_number": 19,
+        "pin_name": "GND",
+        "direction_type": "Ground",
+        "function": "Ground",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            14,
+            15,
+            44
+          ]
+        }
+      },
+      {
+        "pin_number": 20,
+        "pin_name": "BT_ANT",
+        "direction_type": "I/O",
+        "function": "Connect Bluetooth antenna",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            16
+          ]
+        }
+      },
+      {
+        "pin_number": 21,
+        "pin_name": "GND",
+        "direction_type": "Ground",
+        "function": "Ground",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            14,
+            15,
+            44
+          ]
+        }
+      },
+      {
+        "pin_number": 22,
+        "pin_name": "UART2_TXD",
+        "direction_type": "O",
+        "function": "Transmit data",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            15
+          ]
+        }
+      },
+      {
+        "pin_number": 23,
+        "pin_name": "UART2_RXD",
+        "direction_type": "I",
+        "function": "Receive data",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            15
+          ]
+        }
+      },
+      {
+        "pin_number": 24,
+        "pin_name": "USB_VBUS",
+        "direction_type": "I",
+        "function": "Debug and download",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            15
+          ]
+        }
+      },
+      {
+        "pin_number": 25,
+        "pin_name": "USB_DP",
+        "direction_type": "I/O",
+        "function": "Debug and download",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            16
+          ]
+        }
+      },
+      {
+        "pin_number": 26,
+        "pin_name": "USB_DM",
+        "direction_type": "I/O",
+        "function": "Debug and download",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            16
+          ]
+        }
+      },
+      {
+        "pin_number": 27,
+        "pin_name": "GND",
+        "direction_type": "Ground",
+        "function": "Ground",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            14,
+            15,
+            44
+          ]
+        }
+      },
+      {
+        "pin_number": 28,
+        "pin_name": "VRTC",
+        "direction_type": "I/O",
+        "function": "Power supply for RTC",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            14
+          ]
+        }
+      },
+      {
+        "pin_number": 29,
+        "pin_name": "RF_SYNC",
+        "direction_type": "O",
+        "function": "Synchronizing signal of RF",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            16
+          ]
+        }
+      },
+      {
+        "pin_number": 30,
+        "pin_name": "GND",
+        "direction_type": "Ground",
+        "function": "Ground",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            14,
+            15,
+            44
+          ]
+        }
+      },
+      {
+        "pin_number": 31,
+        "pin_name": "GND",
+        "direction_type": "Ground",
+        "function": "Ground",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            14,
+            15,
+            44
+          ]
+        }
+      },
+      {
+        "pin_number": 32,
+        "pin_name": "GSM_ANT",
+        "direction_type": "I/O",
+        "function": "Connect GSM antenna",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            16
+          ]
+        }
+      },
+      {
+        "pin_number": 33,
+        "pin_name": "GND",
+        "direction_type": "Ground",
+        "function": "Ground",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            14,
+            15,
+            44
+          ]
+        }
+      },
+      {
+        "pin_number": 34,
+        "pin_name": "VBAT",
+        "direction_type": "I",
+        "function": "Power supply",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            14
+          ]
+        }
+      },
+      {
+        "pin_number": 35,
+        "pin_name": "VBAT",
+        "direction_type": "I",
+        "function": "Power supply",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            14
+          ]
+        }
+      },
+      {
+        "pin_number": 36,
+        "pin_name": "GND",
+        "direction_type": "Ground",
+        "function": "Ground",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            14,
+            15,
+            44
+          ]
+        }
+      },
+      {
+        "pin_number": 37,
+        "pin_name": "GND",
+        "direction_type": "Ground",
+        "function": "Ground",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            14,
+            15,
+            44
+          ]
+        }
+      },
+      {
+        "pin_number": 38,
+        "pin_name": "ADC",
+        "direction_type": "I",
+        "function": "10bit general analog to digital converter",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            16
+          ]
+        }
+      },
+      {
+        "pin_number": 39,
+        "pin_name": "PWRKEY",
+        "direction_type": "I",
+        "function": "Pulled low for at least 1 second and then released to power on/down the module",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            15
+          ]
+        }
+      },
+      {
+        "pin_number": 40,
+        "pin_name": "VDD_EXT",
+        "direction_type": "O",
+        "function": "2.8V power output",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            14
+          ]
+        }
+      },
+      {
+        "pin_number": 41,
+        "pin_name": "NETLIGHT",
+        "direction_type": "O",
+        "function": "Network status",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            15
+          ]
+        }
+      },
+      {
+        "pin_number": 42,
+        "pin_name": "STATUS",
+        "direction_type": "O",
+        "function": "Power on status",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            15
+          ]
+        }
+      },
+      {
+        "pin_number": 43,
+        "pin_name": "SPK2N",
+        "direction_type": "O",
+        "function": "Differential audio output",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            15
+          ]
+        }
+      },
+      {
+        "pin_number": 44,
+        "pin_name": "SPK2P",
+        "direction_type": "O",
+        "function": "Differential audio output",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            15
+          ]
+        }
+      },
+      {
+        "pin_number": 45,
+        "pin_name": "GND",
+        "direction_type": "Ground",
+        "function": "Ground",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            14,
+            15,
+            44
+          ]
+        }
+      },
+      {
+        "pin_number": 46,
+        "pin_name": "MCCA3",
+        "direction_type": "I/O",
+        "function": "SD serial data I/O",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            15
+          ]
+        }
+      },
+      {
+        "pin_number": 47,
+        "pin_name": "MCCA2",
+        "direction_type": "I/O",
+        "function": "SD serial data I/O",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            15
+          ]
+        }
+      },
+      {
+        "pin_number": 48,
+        "pin_name": "MCCA1",
+        "direction_type": "I/O",
+        "function": "SD serial data I/O",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            15
+          ]
+        }
+      },
+      {
+        "pin_number": 49,
+        "pin_name": "MCCA0",
+        "direction_type": "I/O",
+        "function": "SD serial data I/O",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            15
+          ]
+        }
+      },
+      {
+        "pin_number": 50,
+        "pin_name": "MCCK",
+        "direction_type": "I/O",
+        "function": "SD serial clock",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            15
+          ]
+        }
+      },
+      {
+        "pin_number": 51,
+        "pin_name": "MCCM0",
+        "direction_type": "I/O",
+        "function": "SD command output",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            15
+          ]
+        }
+      },
+      {
+        "pin_number": 52,
+        "pin_name": "SIM2_DET",
+        "direction_type": "I",
+        "function": "SIM card detection",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            16
+          ]
+        }
+      },
+      {
+        "pin_number": 53,
+        "pin_name": "SIM2_DATA",
+        "direction_type": "I/O",
+        "function": "SIM data input/output",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            16
+          ]
+        }
+      },
+      {
+        "pin_number": 54,
+        "pin_name": "SIM2_CLK",
+        "direction_type": "O",
+        "function": "SIM clock",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            16
+          ]
+        }
+      },
+      {
+        "pin_number": 55,
+        "pin_name": "SIM2_RST",
+        "direction_type": "O",
+        "function": "SIM reset",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            16
+          ]
+        }
+      },
+      {
+        "pin_number": 56,
+        "pin_name": "SIM2_VDD",
+        "direction_type": "O",
+        "function": "Voltage supply for SIM card; supports 1.8V or 3V SIM card",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            16
+          ]
+        }
+      },
+      {
+        "pin_number": 57,
+        "pin_name": "GPIO1",
+        "direction_type": "I/O",
+        "function": "Programmable general purpose input and output",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            15
+          ]
+        }
+      },
+      {
+        "pin_number": 58,
+        "pin_name": "GPIO2",
+        "direction_type": "I/O",
+        "function": "Programmable general purpose input and output",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            15
+          ]
+        }
+      },
+      {
+        "pin_number": 59,
+        "pin_name": "PCM_CLK",
+        "direction_type": "I",
+        "function": "PCM interface for digital audio",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            15
+          ]
+        }
+      },
+      {
+        "pin_number": 60,
+        "pin_name": "PCM_IN",
+        "direction_type": "I",
+        "function": "PCM interface for digital audio",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            15
+          ]
+        }
+      },
+      {
+        "pin_number": 61,
+        "pin_name": "PCM_SYNC",
+        "direction_type": "O",
+        "function": "PCM interface for digital audio",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            15
+          ]
+        }
+      },
+      {
+        "pin_number": 62,
+        "pin_name": "PCM_OUT",
+        "direction_type": "O",
+        "function": "PCM interface for digital audio",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            15
+          ]
+        }
+      },
+      {
+        "pin_number": 63,
+        "pin_name": "GND",
+        "direction_type": "Ground",
+        "function": "Ground",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            14,
+            15,
+            44
+          ]
+        }
+      },
+      {
+        "pin_number": 64,
+        "pin_name": "SDA",
+        "direction_type": "I/O",
+        "function": "I2C serial bus data",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            16
+          ]
+        }
+      },
+      {
+        "pin_number": 65,
+        "pin_name": "SCL",
+        "direction_type": "O",
+        "function": "I2C serial bus clock",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            16
+          ]
+        }
+      },
+      {
+        "pin_number": 66,
+        "pin_name": "GND",
+        "direction_type": "Ground",
+        "function": "Ground",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            14,
+            15,
+            44
+          ]
+        }
+      },
+      {
+        "pin_number": 67,
+        "pin_name": "FM_ANT",
+        "direction_type": "I",
+        "function": "Connect FM antenna",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            16
+          ]
+        }
+      },
+      {
+        "pin_number": 68,
+        "pin_name": "GND",
+        "direction_type": "Ground",
+        "function": "Ground",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            14,
+            15,
+            44
+          ]
+        }
+      },
+      {
+        "pin_number": 69,
+        "pin_name": "GND",
+        "direction_type": "Ground",
+        "function": "Ground",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            14,
+            15,
+            44
+          ]
+        }
+      },
+      {
+        "pin_number": 70,
+        "pin_name": "GND",
+        "direction_type": "Ground",
+        "function": "Ground",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            14,
+            15,
+            44
+          ]
+        }
+      },
+      {
+        "pin_number": 71,
+        "pin_name": "GND",
+        "direction_type": "Ground",
+        "function": "Ground",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            14,
+            15,
+            44
+          ]
+        }
+      },
+      {
+        "pin_number": 72,
+        "pin_name": "GND",
+        "direction_type": "Ground",
+        "function": "Ground",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            14,
+            15,
+            44
+          ]
+        }
+      },
+      {
+        "pin_number": 73,
+        "pin_name": "GND",
+        "direction_type": "Ground",
+        "function": "Ground",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            14,
+            15,
+            44
+          ]
+        }
+      },
+      {
+        "pin_number": 74,
+        "pin_name": "GND",
+        "direction_type": "Ground",
+        "function": "Ground",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            14,
+            15,
+            44
+          ]
+        }
+      },
+      {
+        "pin_number": 75,
+        "pin_name": "GND",
+        "direction_type": "Ground",
+        "function": "Ground",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            14,
+            15,
+            44
+          ]
+        }
+      },
+      {
+        "pin_number": 76,
+        "pin_name": "GND",
+        "direction_type": "Ground",
+        "function": "Ground",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            14,
+            15,
+            44
+          ]
+        }
+      },
+      {
+        "pin_number": 77,
+        "pin_name": "GND",
+        "direction_type": "Ground",
+        "function": "Ground",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            14,
+            15,
+            44
+          ]
+        }
+      }
+    ],
+    "reference_circuits": [
+      {
+        "name": "VBAT input reference circuit (Figure 6)",
+        "what_pdf_shows": "VBAT bypass network with CA 100uF, CB 1uF–10uF, 33pF, 10pF, and a 5.1V/500mW Zener diode.",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            20
+          ]
+        }
+      },
+      {
+        "name": "LDO power-supply reference circuit (Figure 7)",
+        "what_pdf_shows": "+5V-input LDO example using MIC29302; text identifies a 4.1V output supply.",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            20
+          ]
+        }
+      },
+      {
+        "name": "DC-DC power-supply reference circuit (Figure 8)",
+        "what_pdf_shows": "DC-DC example using LM2596-ADJ, 100uH inductor, MBR360 diode, and the illustrated output network to VBAT.",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            21
+          ]
+        }
+      },
+      {
+        "name": "PWRKEY transistor power-on/down circuit (Figure 11)",
+        "what_pdf_shows": "A transistor-driven turn-on/off impulse connected to PWRKEY and the module's shown internal power-on/off logic.",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            22
+          ]
+        }
+      },
+      {
+        "name": "PWRKEY button power-on/down circuit (Figure 12)",
+        "what_pdf_shows": "A button circuit connected to PWRKEY and the module's shown internal power-on/off logic.",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            22
+          ]
+        }
+      },
+      {
+        "name": "RTC backup circuits (Figures 16–18)",
+        "what_pdf_shows": "VRTC backup examples using a large capacitor, a non-chargeable backup battery, or a rechargeable backup battery, each shown through 1.5K to the RTC core.",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            26
+          ]
+        }
+      },
+      {
+        "name": "UART resistor matching circuit (Figure 20)",
+        "what_pdf_shows": "The module-to-3.3V-DTE UART connection with illustrated 1K and 5.6K resistors; text says use 14K instead of 5.6K for a 3.0V UART.",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            28
+          ]
+        }
+      },
+      {
+        "name": "UART diode isolation circuit (Figure 21)",
+        "what_pdf_shows": "VDD_EXT/UART1_RXD/TXD isolation example with two 10K components for 3V or 3.3V UART.",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            28
+          ]
+        }
+      },
+      {
+        "name": "5V UART level-matching circuits (Figures 22–23)",
+        "what_pdf_shows": "Separate TX and RX circuits between VDD_EXT/module UART and a 5V DTE, with illustrated 4.7K and 47K resistors.",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            29
+          ]
+        }
+      },
+      {
+        "name": "USB reference circuit (Figure 24)",
+        "what_pdf_shows": "USB_VBUS to VBUS, data-line series 22R components, a shown 1uF capacitor, and GND between module and USB.",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            29
+          ]
+        }
+      },
+      {
+        "name": "Speaker reference circuit (Figure 29)",
+        "what_pdf_shows": "SPK1P/2P and SPK1N/2N differential paths with shown 10pF and 33pF capacitors and ESD near the speaker.",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            32
+          ]
+        }
+      },
+      {
+        "name": "Microphone reference circuit (Figure 30)",
+        "what_pdf_shows": "MICP/MICN differential path to an electret microphone with shown 10pF/33pF components and ESD; text says the components should be close to the microphone.",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            32,
+            33
+          ]
+        }
+      },
+      {
+        "name": "8-pin SIM-card-holder reference circuit (Figure 31)",
+        "what_pdf_shows": "Molex-91228 holder with VDD_EXT 4.7K, 51Ω on SIM_RST/SIM_CLK/SIM_DATA, 22pF capacitors, 100nF, and ESDA6V1.",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            34
+          ]
+        }
+      },
+      {
+        "name": "6-pin SIM-card-holder reference circuit (Figure 32)",
+        "what_pdf_shows": "Six-pin holder circuit with SIM_VDD/SIM_RST/SIM_CLK/SIM_DATA, 51Ω resistors, 22pF capacitors, 100nF, and ESDA6V1; SIM_DET is not connected to the holder diagram.",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            34
+          ]
+        }
+      },
+      {
+        "name": "PCM reference circuit (Figure 35)",
+        "what_pdf_shows": "Cross-connections from PCM_IN/PCM_OUT/PCM_SYNC/PCM_CLK and GND to a CODEC's PCMOUT/PCMIN/PCMSYNC/PCMCLK/GND.",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            38
+          ]
+        }
+      },
+      {
+        "name": "SD reference circuit (Figure 36)",
+        "what_pdf_shows": "MCCA2/MCCA3/MCCM0/VDD_SD/MCCK/GND/MCCA0/MCCA1 connections to SD DAT2/DAT3/CMD/VDD/CLK/GND/DAT0/DAT1.",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            39
+          ]
+        }
+      },
+      {
+        "name": "NETLIGHT reference circuit (Figure 37)",
+        "what_pdf_shows": "NETLIGHT LED-drive reference circuit from VBAT with shown 4.7K and 47K resistors.",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            40
+          ]
+        }
+      },
+      {
+        "name": "GSM antenna matching circuits (Figures 39–40)",
+        "what_pdf_shows": "GSM_ANT between adjacent GND pins, matching positions R101/C101/C102, and D101; one circuit includes an RF connector and the other omits it.",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            41,
+            42
+          ]
+        }
+      },
+      {
+        "name": "Bluetooth antenna matching circuit (Figure 41)",
+        "what_pdf_shows": "BT_ANT between adjacent GND pins with matching positions R201/C201/C202 to the BT antenna.",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            42
+          ]
+        }
+      },
+      {
+        "name": "FM antenna circuits (Figures 42–43)",
+        "what_pdf_shows": "FM_ANT matching network with R301/R302/C301/C302; separate example uses the 3.5mm-earphone GND pin as FM antenna with R301/C301/C302/L301.",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            43
+          ]
+        }
+      }
+    ],
+    "pcb_considerations": [
+      {
+        "assertion": "Keep the trace from antenna-pin output to connector as short as possible; do not route RF signal across the board; keep RF signal away from the SIM card and power ICs.",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            45
+          ]
+        }
+      },
+      {
+        "assertion": "Make the VBAT positive line short and wide; route source to VBAT through Zener diode then large capacitor; make pins 36 and 37 as short a connection as possible to power-source ground.",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            45
+          ]
+        }
+      },
+      {
+        "assertion": "The module has 23 GND pads; if possible, do not route signals on the upper layer of those pads.",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            45
+          ]
+        }
+      },
+      {
+        "assertion": "Keep SIM-card holder away from antenna/RF cable and near the module; use ESD protection for SIM_CLK, SIM_DATA, SIM_RST, and SIM_VDD; keep them away from power and high-speed-frequency signals.",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            45
+          ]
+        }
+      },
+      {
+        "assertion": "Keep audio traces away from antenna and power and avoid routing them in parallel with VBAT trace.",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            45
+          ]
+        }
+      },
+      {
+        "assertion": "Route UART signals together, and likewise USB signals.",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            45
+          ]
+        }
+      },
+      {
+        "assertion": "For power design, PCB traces from VBAT pins to supply must be at least 60mil wide; place the power IC and bypass capacitor as close to the module as possible.",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            21
+          ]
+        }
+      },
+      {
+        "assertion": "SIM traces should be short, away from RF/VBAT/high-speed lines, and the holder ground should connect directly to main ground; shield SIM signals with ground.",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            34
+          ]
+        }
+      },
+      {
+        "assertion": "Audio lines should be routed as differential signals; keep them away from RF cable, antenna, and VBAT. Place one group of audio bypass capacitors near the module and another near the connector.",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            32,
+            33
+          ]
+        }
+      }
+    ],
+    "antenna_requirements": [
+      {
+        "assertion": "Three antenna interfaces are provided: GSM_ANT, BT_ANT, and FM_ANT.",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            41
+          ]
+        }
+      },
+      {
+        "assertion": "Antenna input impedance should be 50Ω and VSWR should be less than 2.",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            41
+          ]
+        }
+      },
+      {
+        "assertion": "Place GSM and BT antennas as far apart as possible; isolation between the two antennas should exceed 30dB.",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            41
+          ]
+        }
+      },
+      {
+        "assertion": "GSM_ANT can connect to the module using a 50Ω microstrip line or stripline antenna.",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            41
+          ]
+        }
+      },
+      {
+        "assertion": "For GSM matching, values of R101/C101/C102 are set by antenna design; normally R101 is 0Ω and C101/C102 are not mounted. The RF connector used for conducted RF test should be as close as possible to the antenna pin; component-to-component trace impedance must be controlled to 50Ω.",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            41,
+            42
+          ]
+        }
+      },
+      {
+        "assertion": "For BT matching, values of R201/C201/C202 are set by antenna design; normally R201 is 0R and C201/C202 are not mounted.",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            42
+          ]
+        }
+      },
+      {
+        "assertion": "Keep the antenna matching circuit close to the antenna, maintain 50Ω RF traces, and keep RF traces away from high-frequency signals and strong interference sources.",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            42
+          ]
+        }
+      },
+      {
+        "assertion": "For the FM antenna circuit, normally R301/R302 are 0Ω and C301/C302 are not mounted; the earphone-GND option normally uses R301=0Ω with C301/C302/L301 not mounted.",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            43
+          ]
+        }
+      }
+    ],
+    "protection_circuits": [
+      {
+        "assertion": "For VBAT, the document strongly recommends a 100uF low-ESR tantalum CA, 1uF–10uF ceramic CB, 33pF and 10pF capacitors, and a 5.1V/500mW Zener diode close to VBAT; the diode is said to prevent surge damage.",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            20
+          ]
+        }
+      },
+      {
+        "assertion": "All SIM-interface signals should be protected against ESD with a TVS-diode array. The document recommends ESDA6V1-5W6 or SMF05C and locating SIM peripheral components close to the SIM holder.",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            16,
+            33
+          ]
+        }
+      },
+      {
+        "assertion": "SIM-design guidance: TVS parasitic capacitance should not exceed 50pF; 51Ω resistors on SIM_RST/SIM_CLK/SIM_DATA enhance ESD protection; 22pF capacitors reduce RF interference.",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            34
+          ]
+        }
+      },
+      {
+        "assertion": "USB data-line TVS capacitance should be less than 5pF and the data lines should be routed differentially.",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            29
+          ]
+        }
+      },
+      {
+        "assertion": "The GSM antenna D101 is a bidirectional TVS for ESD protection; recommended parts are listed as Murata LXES03AAA1-098, LXES03AAA1-154, LXES15AAA1-153, LXES15AAA1-100, and LXES15AAA1-017.",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            42
+          ]
+        }
+      },
+      {
+        "assertion": "Speaker and microphone reference figures show ESD protection at the external audio endpoint.",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            32,
+            33
+          ]
+        }
+      }
+    ]
+  },
+  "validation_tests": {
+    "functional": [
+      {
+        "test": "Power-on sequence using PWRKEY",
+        "method/procedure": "Pull PWRKEY low for at least 1 second and release. The module says it sends RDY when power-on completes at fixed baud rate; RDY does not appear when autobauding is active.",
+        "explicit_pass_fail_criteria": "RDY is sent at fixed baud rate after completion; this URC is absent with autobauding active.",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            22
+          ]
+        }
+      },
+      {
+        "test": "Power-off sequence using PWRKEY",
+        "method/procedure": "Pull PWRKEY low for at least 1.5 seconds and release. The document gives 1.5s<T1<33s and timing relationships, and says the module logs off and saves data before shutdown.",
+        "explicit_pass_fail_criteria": "NORMAL POWER OFF URC before completion; STATUS low indicates power-off mode.",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            23
+          ]
+        }
+      },
+      {
+        "test": "Power-off using AT+CPOWD=1",
+        "method/procedure": "Issue AT+CPOWD=1 for normal power off.",
+        "explicit_pass_fail_criteria": "NORMAL POWER OFF URC before completion; STATUS low indicates power-off mode.",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            23
+          ]
+        }
+      },
+      {
+        "test": "Restart by PWRKEY",
+        "method/procedure": "Power off, wait at least 800ms after STATUS becomes low, then power on.",
+        "explicit_pass_fail_criteria": null,
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            24
+          ]
+        }
+      },
+      {
+        "test": "NETLIGHT status indication",
+        "method/procedure": "Observe NETLIGHT after power off, before registration, after registration, and when GPRS communication is established.",
+        "explicit_pass_fail_criteria": "Off when powered off; 64ms on/800ms off when not registered; 64ms on/3000ms off when registered; 64ms on/300ms off when GPRS communication is established.",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            40
+          ]
+        }
+      },
+      {
+        "test": "STATUS output indication",
+        "method/procedure": "Observe pin 42 while powering the module on and off.",
+        "explicit_pass_fail_criteria": "High when powered on and low when powered off.",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            40
+          ]
+        }
+      }
+    ],
+    "communication": [
+      {
+        "test": "Autobauding synchronization",
+        "method/procedure": "With autobauding enabled on power-up, send AT, at, aT, or At until the DTE receives OK. DTE serial format must be 8 data bits, no parity, one stop bit.",
+        "explicit_pass_fail_criteria": "OK response means DTE and DCE are correctly synchronized.",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            27
+          ]
+        }
+      },
+      {
+        "test": "USB firmware-download entry",
+        "method/procedure": "Power on the module and connect USB_VBUS, USB_DP, USB_DM, and GND to the PC; do not operate PWRKEY during the procedure.",
+        "explicit_pass_fail_criteria": "When USB_VBUS is detected and USB_DP/USB_DM communicate normally, the module enters USB download mode automatically.",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            30
+          ]
+        }
+      },
+      {
+        "test": "Conducted RF output-power measurement",
+        "method/procedure": "The document presents conducted output-power tables for GSM850/EGSM900 and DCS1800/PCS1900 and says they follow 3GPP TS 05.05 technical-specification requirements.",
+        "explicit_pass_fail_criteria": null,
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            49
+          ]
+        }
+      },
+      {
+        "test": "Conducted RF receive-sensitivity measurement",
+        "method/procedure": "The document states the conducted receive sensitivity table was tested under static condition for GSM850/EGSM900 and DCS1800/PCS1900.",
+        "explicit_pass_fail_criteria": null,
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            50
+          ]
+        }
+      }
+    ],
+    "power": [
+      {
+        "test": "VBAT voltage-drop during transmit burst",
+        "method/procedure": "Use VBAT=4.0V, CA=100uF tantalum with ESR=0.7Ω, and CB=1uF–10uF; the figure labels a 2A burst.",
+        "explicit_pass_fail_criteria": "Maximum VBAT voltage drop: 350mV.",
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            21
+          ]
+        }
+      },
+      {
+        "test": "Current-consumption characterization at VBAT=4.0V",
+        "method/procedure": "The source's Table 36 reports current consumption under the listed power-off, sleep, idle, voice-call, and GPRS data-mode conditions; it says values are typical laboratory values and individual production units may differ.",
+        "explicit_pass_fail_criteria": null,
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            47,
+            48
+          ]
+        }
+      }
+    ],
+    "environmental": [
+      {
+        "test": "ESD characteristics",
+        "method/procedure": "The ESD table reports contact- and air-discharge results at temperature 25℃ and humidity 45% for VBAT, GND, UART1_TXD/UART1_RXD, antenna port, SPKP/SPKN/MICP/MICN, and PWRKEY.",
+        "explicit_pass_fail_criteria": null,
+        "source": {
+          "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+          "pages": [
+            48
+          ]
+        }
+      }
+    ]
+  },
+  "version_differences": [],
+  "missing_data": [
+    {
+      "field": "technical_specs.GNSS_GPS_support",
+      "reason": "No GNSS or GPS support statement was found in the complete supplied hardware-design source.",
+      "attempted_sources": [
+        "SIM800C-DS_Hardware_Design_V1.01.txt"
+      ]
+    },
+    {
+      "field": "at_commands.complete_per_model_catalog",
+      "reason": "The supplied hardware document contains only scattered command references and points to a separate family AT-command manual; that manual was not supplied and would not itself prove per-model support.",
+      "attempted_sources": [
+        "SIM800C-DS_Hardware_Design_V1.01.txt"
+      ]
+    },
+    {
+      "field": "validation_tests.functional.restart.explicit_pass_fail_criteria",
+      "reason": "The source gives the restart sequence but no explicit acceptance criterion.",
+      "attempted_sources": [
+        "SIM800C-DS_Hardware_Design_V1.01.txt"
+      ]
+    },
+    {
+      "field": "validation_tests.communication.conducted_RF_output_power.explicit_pass_fail_criteria",
+      "reason": "The source provides output-power/tolerance tables and states conformance to a 3GPP requirement, but does not express a pass/fail criterion or test procedure.",
+      "attempted_sources": [
+        "SIM800C-DS_Hardware_Design_V1.01.txt"
+      ]
+    },
+    {
+      "field": "validation_tests.communication.conducted_RF_receive_sensitivity.explicit_pass_fail_criteria",
+      "reason": "The source reports sensitivity results under static condition but no explicit pass/fail criterion.",
+      "attempted_sources": [
+        "SIM800C-DS_Hardware_Design_V1.01.txt"
+      ]
+    },
+    {
+      "field": "validation_tests.power.current_consumption.explicit_pass_fail_criteria",
+      "reason": "The source identifies the table as typical laboratory values and supplies no acceptance criterion.",
+      "attempted_sources": [
+        "SIM800C-DS_Hardware_Design_V1.01.txt"
+      ]
+    },
+    {
+      "field": "validation_tests.environmental.non_ESD_qualification",
+      "reason": "No standalone temperature-cycle, humidity, vibration, shock, or thermal validation test procedure is documented in the supplied source.",
+      "attempted_sources": [
+        "SIM800C-DS_Hardware_Design_V1.01.txt"
+      ]
+    }
+  ],
+  "ambiguities": [
+    {
+      "topic": "Pin-1-to-77 ground-pad list",
+      "detail": "Table 5's GND pin-number list is line-wrapped such that 31, 66, and 73 are split as adjacent digits in extracted text. Figure 44 corroborates the GND positions. Ground-pin records retain this ambiguity in their citation.",
+      "source": {
+        "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+        "pages": [
+          14,
+          15,
+          44
+        ]
+      }
+    },
+    {
+      "topic": "PWRKEY duration wording",
+      "detail": "Table 5 says PWRKEY should be low for at least 1 second to power on/down, while the current document's power-off procedure specifies at least 1.5 seconds. The same document's power-on procedure specifies at least 1 second. The JSON keeps each context rather than reconciling them.",
+      "source": {
+        "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+        "pages": [
+          15,
+          22,
+          23
+        ]
+      }
+    },
+    {
+      "topic": "Dimension drawing extraction",
+      "detail": "Figure 3 is captioned as SIM800C-DS dimensions in mm, but its individual drawing dimensions are not present in the supplied text extraction. The reported 17.6 × 15.7 × 2.3 mm comes from the key-features table, not from reading the drawing.",
+      "source": {
+        "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+        "pages": [
+          11,
+          17
+        ]
+      }
+    },
+    {
+      "topic": "Current-consumption discrepancy",
+      "detail": "For AT+CFUN=1 and BS-PA-MFRMS=2, Table 7 reports 1.6mA, whereas Table 36 reports 1.58mA. Both source values are retained separately.",
+      "source": {
+        "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+        "pages": [
+          24,
+          48
+        ]
+      }
+    },
+    {
+      "topic": "Schematic text extraction",
+      "detail": "Schematic component labels and connections in the reference-circuit descriptions are transcribed from extracted diagram text. Diagram geometry, unlabelled connections, and component orientation cannot be fully validated from this text-only source.",
+      "source": {
+        "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+        "pages": [
+          20,
+          21,
+          22,
+          26,
+          28,
+          29,
+          32,
+          33,
+          34,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43
+        ]
+      }
+    },
+    {
+      "topic": "USB signal spelling",
+      "detail": "The pin table names the negative USB signal USB_DM, while Figure 24's extracted schematic text uses USB_DN. This output preserves the pin-table name for the pinout and notes the diagram text without assuming a distinct signal.",
+      "source": {
+        "source_pdf": "SIM800C-DS_Hardware_Design_V1.01.pdf",
+        "pages": [
+          16,
+          29
+        ]
+      }
+    }
+  ]
+}
